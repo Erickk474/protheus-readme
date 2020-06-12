@@ -66,4 +66,10 @@ Após estarmos conectados à VPN e termos todas as premissas em mãos, podemos c
 - Advpl.selectedEnvironment:
     - Sugiro colocar o nome do ambiente do cliente novamente
 
+Após toda a configuração do .vscode, será necessário informar o ambiente em que você está trabalhando, para isso, selecione o ambiente no canto inferior direito do VSCode e uma caixa seletora aparecerá na parte superior, selecione o ambiente (nesse caso é o "APRENDIZADO")e pronto. 
+
+*Antes:*
 ![environment](https://user-images.githubusercontent.com/51421653/84517493-c8670f00-aca5-11ea-8b61-ab037c37cf2f.PNG)
+
+*Depois:*
+![environment setado](https://user-images.githubusercontent.com/51421653/84517992-6529ac80-aca6-11ea-82d2-bd1eb0fcb63a.PNG)
