@@ -37,13 +37,13 @@ Após estarmos conectados à VPN e termos todas as premissas em mãos, podemos c
             "smartClientPath": "C:\\Protheus\\BIN\\Smartclient-Carajas\\",
             "environment": "CARAJAS_HOMOLOG",
             "includeList": "C:\\Protheus\\includes\\",
-            "server": "192.168.0.13",
-            "port": "1350",
-            "user": "linkapi",
-            "passwordCipher": "ZUdXZDI3K2IzRWFTRkdqaHYvZVdTZkJoQVFCZ01nNUN0R3p0UEd0NzFFbGRwWXRIQ2NuV1plcnRKWStFd3RxL05tTUNKaEtObHRVTjB5QTJDSkpLaFBzVTA4SGNlVjZhS2JtN2F0VGdTTmM0bFdkMWduQXJJd1pXVmk4RU5DR1U="
+            "server": "192.168.0.1",
+            "port": "5000",
+            "user": "Usuario",
+            "passwordCipher": "senhaDoUsuario123"
         }
     ],
-    "advpl.workspaceFolders": "c:\\Users\\lkpadmin\\Desktop\\Protheus\\carajas\\api-protheus-carajas;",
-    "advpl.selectedEnvironment": "CARAJAS_HOMOLOG"
+    "advpl.workspaceFolders": "c:\\Users\\Protheus\\api-protheus",
+    "advpl.selectedEnvironment": "APRENDIZADO"
 }
 ```
