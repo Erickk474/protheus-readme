@@ -58,7 +58,7 @@ Após estarmos conectados à VPN e termos todas as premissas em mãos, podemos c
 - Port:
     - Porta do servidor
 - User: 
-    - Usuario para acesso ao servidor
+    - Usuário para acesso ao servidor
 - PasswordCipher: 
     - Senha para acesso ao servidor
 - Advpl.workspaceFolders:
