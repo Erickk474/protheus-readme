@@ -10,7 +10,7 @@ Nas aulas tem o básico da sintaxe da linguagem AdvPL, porém é possível acess
 ### Requisitos para o Início de Projeto
 Como visto no treinamento, o sistema protheus possui algumas configurações de conexão de ambiente que precisam ser feitas antes de o ambiente ficar pronto para desenvolvimento. É necessário se atentar nos seguintes pontos:
 
-- Artefatos Protheus:
+#### Artefatos Protheus:
 - Pasta smartclient com executável da versão que o cliente está usando, com informações de acesso ao server (smartclient.ini configurado)
 - Includes que o cliente usa
 - Enviar IP e porta do server
