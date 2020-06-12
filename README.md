@@ -66,4 +66,4 @@ Após estarmos conectados à VPN e termos todas as premissas em mãos, podemos c
 - Advpl.selectedEnvironment:
     - Sugiro colocar o nome do ambiente do cliente novamente
 
-![Environment](C:\\Users\\Kinho\\Desktop\\environment.png)
+![environment](https://user-images.githubusercontent.com/51421653/84517493-c8670f00-aca5-11ea-8b61-ab037c37cf2f.PNG)
