@@ -28,7 +28,10 @@ Após estarmos conectados à VPN e termos todas as premissas em mãos, podemos c
 
 - Guarde as pastas 'Smartclient' e 'Includes' no seu computador
 - Crie uma pasta para o código do seu projeto
-- Inicie um arquivo de configuração .vscode e configure-o seguindo o modelo abaixo: 
+    - No VSCode, abra a pasta do código, clique com o botão direito e abra "Open Folder Settings"
+    - Abra o tópico "Text Editor" e abaixo de "Code Actions on Save" clique em "Edit in Settings.json". Isso gerará uma pasta .vscode com um arquivo "settings.json"
+    - ![vscode settings](https://user-images.githubusercontent.com/51421653/84521615-a83a4e80-acab-11ea-9bbd-122ea0cb7c9b.PNG)
+    - Configure o "settings.json" seguindo o modelo abaixo: 
 
 ```
 {
@@ -72,9 +75,9 @@ Windows: Ctrl + '
 Linux: Ctrl + Shift + `
 ```
 vá até a aba "OUTPUT".
-Agora com o arquivo .vscode aberto utilize o comando Ctrl + P e escreva '>Advpl - Compiler Cipher' isso irá abrir uma caixa de texto, coloque a senha que foi escrita no arquivo .vscode e uma nova senha será gerada no console, cole a nova senha no arquivo .vscode no lugar na senha antiga.
+Agora com o arquivo settings.json aberto utilize o comando Ctrl + P e escreva '>Advpl - Compiler Cipher' isso irá abrir uma caixa de texto, coloque a senha que foi escrita no arquivo settings.json e uma nova senha será gerada no console, cole a nova senha no arquivo settings.json no lugar na senha antiga.
 
-Após toda a configuração do .vscode, será necessário informar o ambiente em que você está trabalhando, para isso, selecione o ambiente no canto inferior direito do VSCode e uma caixa seletora aparecerá na parte superior, selecione o ambiente (nesse caso é o "TESTE")e pronto. 
+Após toda a configuração do settings.json, será necessário informar o ambiente em que você está trabalhando, para isso, selecione o ambiente no canto inferior direito do VSCode e uma caixa seletora aparecerá na parte superior, selecione o ambiente (nesse caso é o "TESTE")e pronto. 
 
 Antes:
 
