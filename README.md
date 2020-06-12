@@ -65,3 +65,5 @@ Após estarmos conectados à VPN e termos todas as premissas em mãos, podemos c
     - Caminho absoluto da pasta onde você irá armazenar os códigos
 - Advpl.selectedEnvironment:
     - Sugiro colocar o nome do ambiente do cliente novamente
+
+![environment](C:\Users\Kinho\Desktop\environment)
