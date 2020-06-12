@@ -28,22 +28,7 @@ Após estarmos conectados à VPN e termos todas as premissas em mãos, podemos c
 
 - Guarde as pastas 'Smartclient' e 'Includes' no seu computador
 - Crie uma pasta para o código do seu projeto
-- Inicie um arquivo de configuração .vscode:
-    - Configure-o utilizando o exemplo abaixo;
-    - SmartClientPath: 
-        - Caminho absoluto da pasta "smartclient" em seu computador
-    - Environment:
-        - Nome do ambiente do cliente
-    - IncludeList:
-        - Caminho absoluto da pasta "include" em seu computador
-    - Server:
-        - IP do servidor
-    - Port:
-        - Porta do servidor
-    - User: 
-        - Usuario para acesso ao servidor
-    - PasswordCipher: 
-        - Senha para acesso ao servidor
+- Inicie um arquivo de configuração .vscode e configure-o seguindo o modelo abaixo: 
 
 ```
 {
@@ -62,3 +47,18 @@ Após estarmos conectados à VPN e termos todas as premissas em mãos, podemos c
     "advpl.selectedEnvironment": "APRENDIZADO"
 }
 ```
+- Campos:
+    - SmartClientPath: 
+        - Caminho absoluto da pasta "smartclient" em seu computador
+    - Environment:
+        - Nome do ambiente do cliente
+    - IncludeList:
+        - Caminho absoluto da pasta "include" em seu computador
+    - Server:
+        - IP do servidor
+    - Port:
+        - Porta do servidor
+    - User: 
+        - Usuario para acesso ao servidor
+    - PasswordCipher: 
+        - Senha para acesso ao servidor
