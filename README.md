@@ -20,7 +20,7 @@ Como visto no treinamento, o sistema protheus possui algumas configurações de 
 - Ambiente de homologação:
 - Server dedicado para o dev poder compilar as APIs a qualquer momento
 - Base de dados dedicada para homologação (desejável)
-- Acesso total ao servidor, inclusive para alterarmos o appserver.ini, pois é necessário desabilitar o REST para compilar e habilitar para consumir a API
+- Acesso total ao servidor, inclusive para alterarmos o appserver.ini, pois é necessário desabilitar o REST para compilar e habilitar para consumir a API (será explicado mais adiante)
 - Ter ponto focal de Protheus no lado do cliente
 
 
