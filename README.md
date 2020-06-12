@@ -47,22 +47,21 @@ Após estarmos conectados à VPN e termos todas as premissas em mãos, podemos c
     "advpl.selectedEnvironment": "APRENDIZADO"
 }
 ```
-- Campos:
-    - SmartClientPath: 
-        - Caminho absoluto da pasta "smartclient" em seu computador
-    - Environment:
-        - Nome do ambiente do cliente
-    - IncludeList:
-        - Caminho absoluto da pasta "include" em seu computador
-    - Server:
-        - IP do servidor
-    - Port:
-        - Porta do servidor
-    - User: 
-        - Usuario para acesso ao servidor
-    - PasswordCipher: 
-        - Senha para acesso ao servidor
-    - Advpl.workspaceFolders:
-        - Caminho absoluto da pasta onde você irá armazenar os códigos
-    - Advpl.selectedEnvironment:
-        - Sugiro colocar o nome do ambiente do cliente novamente
+- SmartClientPath: 
+    - Caminho absoluto da pasta "smartclient" em seu computador
+- Environment:
+    - Nome do ambiente do cliente
+- IncludeList:
+    - Caminho absoluto da pasta "include" em seu computador
+- Server:
+    - IP do servidor
+- Port:
+    - Porta do servidor
+- User: 
+    - Usuario para acesso ao servidor
+- PasswordCipher: 
+    - Senha para acesso ao servidor
+- Advpl.workspaceFolders:
+    - Caminho absoluto da pasta onde você irá armazenar os códigos
+- Advpl.selectedEnvironment:
+    - Sugiro colocar o nome do ambiente do cliente novamente
