@@ -84,3 +84,6 @@ Depois:
 
 ![environment setado](https://user-images.githubusercontent.com/51421653/84517992-6529ac80-aca6-11ea-82d2-bd1eb0fcb63a.PNG)
 
+Pronto! agora você está pronto para desenvolver.
+
+### Compilação
