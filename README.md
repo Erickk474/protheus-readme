@@ -62,3 +62,7 @@ Após estarmos conectados à VPN e termos todas as premissas em mãos, podemos c
         - Usuario para acesso ao servidor
     - PasswordCipher: 
         - Senha para acesso ao servidor
+    - Advpl.workspaceFolders:
+        - Caminho absoluto da pasta onde você irá armazenar os códigos
+    - Advpl.selectedEnvironment:
+        - Sugiro colocar o nome do ambiente do cliente novamente
