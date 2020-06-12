@@ -66,6 +66,14 @@ Após estarmos conectados à VPN e termos todas as premissas em mãos, podemos c
 - Advpl.selectedEnvironment:
     - Sugiro colocar o nome do ambiente do cliente novamente
 
+Para finalizarmos a configuração do .vscode, nós temos que seguir um processo de encriptação de senha, para isso, abra o console do vscode
+```
+Windows: Ctrl + ' 
+Linux: Ctrl + Shift + `
+```
+vá até a aba "OUTPUT".
+Agora com o arquivo .vscode aberto utilize o comando Ctrl + P e escreva '>Advpl - Compiler Cipher' isso irá abrir uma caixa de texto, coloque a senha que foi escrita no arquivo .vscode e uma nova senha será gerada no console, cole a nova senha no arquivo .vscode no lugar na senha antiga.
+
 Após toda a configuração do .vscode, será necessário informar o ambiente em que você está trabalhando, para isso, selecione o ambiente no canto inferior direito do VSCode e uma caixa seletora aparecerá na parte superior, selecione o ambiente (nesse caso é o "TESTE")e pronto. 
 
 Antes:
@@ -75,3 +83,4 @@ Antes:
 Depois:
 
 ![environment setado](https://user-images.githubusercontent.com/51421653/84517992-6529ac80-aca6-11ea-82d2-bd1eb0fcb63a.PNG)
+
