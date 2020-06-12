@@ -2,7 +2,7 @@
 
 
 ### Setup e Sistema de Diretórios
-A explicação sobre o sistema de arquivos e setup de ambiente estão disponíveis na Aula 2
+A explicação sobre o sistema de arquivos e setup de ambiente estão disponíveis na Aula 2 (você pode acessar através desse link [Aula_Protheus](https://drive.google.com/drive/u/0/folders/1qQ28BIS-p4wHPqf6MdBrkGqAwPZyPdLh)).
 
 ### Linguagem AdvPL
 Nas aulas tem o básico da sintaxe da linguagem AdvPL, porém é possível acessar mais informações, como funções auxiliares, conceitos da linguagem e etc, no seguinte link: [Advpl](https://tdn.totvs.com/display/tec/AdvPL)
