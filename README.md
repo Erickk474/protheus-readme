@@ -25,3 +25,25 @@ Como visto no treinamento (caso não tenha participado do treinamento, você pod
 
 ## Iniciando com o projeto
 Após estarmos conectados à VPN e termos todas as premissas em mãos, podemos começar com a configuração inicial do ambiente.
+
+- Guarde as pastas 'Smartclient' e 'Includes' no seu computador
+- Crie uma pasta para o código do seu projeto
+- Inicie um arquivo de configuração .vscode
+
+```
+{
+    "advpl.environments": [
+        {
+            "smartClientPath": "C:\\Protheus\\BIN\\Smartclient-Carajas\\",
+            "environment": "CARAJAS_HOMOLOG",
+            "includeList": "C:\\Protheus\\includes\\",
+            "server": "192.168.0.13",
+            "port": "1350",
+            "user": "linkapi",
+            "passwordCipher": "ZUdXZDI3K2IzRWFTRkdqaHYvZVdTZkJoQVFCZ01nNUN0R3p0UEd0NzFFbGRwWXRIQ2NuV1plcnRKWStFd3RxL05tTUNKaEtObHRVTjB5QTJDSkpLaFBzVTA4SGNlVjZhS2JtN2F0VGdTTmM0bFdkMWduQXJJd1pXVmk4RU5DR1U="
+        }
+    ],
+    "advpl.workspaceFolders": "c:\\Users\\lkpadmin\\Desktop\\Protheus\\carajas\\api-protheus-carajas;",
+    "advpl.selectedEnvironment": "CARAJAS_HOMOLOG"
+}
+```
