@@ -31,9 +31,6 @@ Após estarmos conectados à VPN e termos todas as premissas em mãos, podemos c
     - Abra o tópico "Text Editor" e abaixo de "Code Actions on Save" clique em "Edit in Settings.json". Isso gerará uma pasta .vscode com um arquivo "settings.json"
     - Configure o "settings.json" seguindo o modelo abaixo: 
 
-![Animated GIF-downsized_large](https://user-images.githubusercontent.com/51421653/85057470-26e52f00-b177-11ea-86cd-182b936d5091.gif)
-
-
 ```
 {
     "advpl.environments": [
@@ -51,6 +48,10 @@ Após estarmos conectados à VPN e termos todas as premissas em mãos, podemos c
     "advpl.selectedEnvironment": "TESTE"
 }
 ```
+
+![Animated GIF-downsized_large](https://user-images.githubusercontent.com/51421653/85057470-26e52f00-b177-11ea-86cd-182b936d5091.gif)
+
+
 - <b>SmartClientPath:</b> 
     - Caminho absoluto da pasta "smartclient" em seu computador
 - <b>Environment:</b>
