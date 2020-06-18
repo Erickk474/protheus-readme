@@ -193,7 +193,7 @@ GetArea -> <br>
 GetNextAlias -> <br> 
 cQuery -> query formada para a chamada no banco de dados. <br>
 <ul>
-DbUseArea -> parametros informados para a execução da chamada (para suas próximas chamadas)
+DbUseArea -> parametros informados para a execução da chamada (para suas próximas chamadas).<br>
 <b>DBUseArea([ lNewArea ], [ cDriver ], < cFile >, < cAlias >, [ lShared ], [ lReadOnly ]).</b>
 <li>lNewArea -> Caso verdadeiro, indica que a tabela deve ser aberta em uma nova workarea (Default=.F.)</li>
 <li>cDriver -> Informa o Driver (RDD) a ser utilizada para a abertura da tabela. Caso não especificado (NIL), será usado o driver default de acesso a arquivos locais.</li>
