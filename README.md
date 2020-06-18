@@ -1,14 +1,13 @@
 # Guia de Referência Protheus
 
-
 ### Setup e Sistema de Diretórios
-Você pode acessar o video da aula e mais arquivos desse link: [Aula_Protheus](https://drive.google.com/drive/u/0/folders/1qQ28BIS-p4wHPqf6MdBrkGqAwPZyPdLh).
+Você pode acessar o video da aula e mais arquivos desse link: <a href="https://drive.google.com/drive/u/0/folders/1qQ28BIS-p4wHPqf6MdBrkGqAwPZyPdLh" target="_blank">Aula Protheus</a>.
 
 ### Linguagem AdvPL
-Nas aulas tem o básico da sintaxe da linguagem AdvPL, porém é possível acessar mais informações, como funções auxiliares, conceitos da linguagem e etc, no seguinte link: [Advpl](https://tdn.totvs.com/display/tec/AdvPL)
+Nas aulas tem o básico da sintaxe da linguagem AdvPL, porém é possível acessar mais informações, como funções auxiliares, conceitos da linguagem e etc, no seguinte link: <a href="https://tdn.totvs.com/display/tec/AdvPL" target="_blank">Advpl</a>)
 
 ### Requisitos para o Início de Projeto
-Como visto no treinamento (caso não tenha participado do treinamento, você pode acessá-lo através desse link: [Treinamento_Protheus](https://drive.google.com/drive/u/0/folders/1qQ28BIS-p4wHPqf6MdBrkGqAwPZyPdLh)), o sistema protheus possui algumas configurações de conexão de ambiente que precisam ser feitas antes de o ambiente ficar pronto para desenvolvimento. É necessário se atentar nos seguintes pontos:
+Como visto no treinamento (caso não tenha participado do treinamento, você pode acessá-lo através desse link: <a href="https://drive.google.com/drive/u/0/folders/1qQ28BIS-p4wHPqf6MdBrkGqAwPZyPdLh" target="_blank">Treinamento Protheus</a>), o sistema protheus possui algumas configurações de conexão de ambiente que precisam ser feitas antes de o ambiente ficar pronto para desenvolvimento. É necessário se atentar nos seguintes pontos:
 
 #### Artefatos Protheus:
 - Pasta smartclient com executável da versão que o cliente está usando, com informações de acesso ao server (smartclient.ini configurado pelo cliente)
@@ -202,8 +201,8 @@ Agora, faremos a chamada no banco de dados para buscar as informações solicita
 <b>GetNextAlias</b> -> Busca um alias disponível para utilização.<br> 
 <b>cQuery</b> -> Query formada para a chamada no banco de dados.<br>
 <b>dbGoTop</b> -> Move para o primeiro registro.<br>
-<b>RetSQLName</b> -> Nome da tabela que será consultada (nesse guia estou utilizando uma tabela padrão do protheus, você pode consultar mais tabelas aqui: [Tabelas](https://terminaldeinformacao.com/wp-content/tabelas/ay5.php)).<br>
-<a href="https://terminaldeinformacao.com/wp-content/tabelas/ay5.php" target="_blank">Hello, world!</a>
+<b>RetSQLName</b> -> Nome da tabela que será consultada (nesse guia estou utilizando uma tabela padrão do protheus, você pode consultar mais tabelas aqui: <a href="https://terminaldeinformacao.com/wp-content/tabelas/ay5.php" target="_blank">Tabelas</a>).<br>
+
 DbUseArea -> parametros informados para a execução da chamada (para suas próximas chamadas).<br>
 ```
 DBUseArea([ lNewArea ], [ cDriver ], < cFile >, < cAlias >, [ lShared ], [ lReadOnly ]).
