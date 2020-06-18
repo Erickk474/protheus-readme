@@ -148,10 +148,11 @@ Return(Self)
 
 Chegou a hora de criarmos a primeira rota da nossa API;
 
-_WSRESTFUL -> Nome semântico da rota_<br>
-_DESCRIPTION -> Descrição da rota_<br>
-_WSMETHOD -> Método da rota_<br>
-_WSSYNTAX -> Recurso da rota_<br>
+_WSRESTFUL -> Nome semântico da rota._<br>
+_DESCRIPTION -> Descrição da rota._<br>
+_WSMETHOD -> Método da rota._<br>
+_WSSYNTAX -> Recurso da rota._<br>
+_WSDATA -> Parâmetros da rota._<br>
 
 ```
 WSRESTFUL products DESCRIPTION "Product REST API"
@@ -162,6 +163,25 @@ WSRESTFUL products DESCRIPTION "Product REST API"
     WSMETHOD GET DESCRIPTION "Get list of products" WSSYNTAX "/products"
 
 END WSRESTFUL 
+```
+
+Neste passo, estaremos escrevendo o que a nossa rota irá fazer.<br>
+_WSMETHOD GET -> dizemos qual a rota que estamos que estamos construindo._<br>
+_WSRECEIVE -> Em seguida, dizemos o que a rota poderá receber na queryString._<br>
+_WSSERVICE -> dizemos qual é o serviço (_'products'_ que criamos anteriormente)._<br>
+
+```
+WSMETHOD GET WSRECEIVE offset, limit, id WSSERVICE products
+    
+    Local oProduct
+    Local aArea := {}
+    Local lAuthorized := .F.
+    Local cAuth := ""
+    Local cQuery := ""
+    
+    DEFAULT ::offset := 0, ::limit := 20
+
+    ::SetContentType("application/json")
 ```
 
 ### Compilação
