@@ -126,11 +126,11 @@ Class Products
 End Class
 ```
 
-Metodo: 
+Metodo: Utilizamos as mesmas variaveis na classe;
 _(o 'c' que antecede todas as variaveis abaixo é para explicar o tipo do dado, exemplo:
-c = caractere
-n = numerico
-o = objeto 
+c = caractere,
+n = numerico,
+o = objeto, 
 etc...)_
 ```
 Method New(cFilial, cCodigo, cDescricao, cValor, cProduto, cStatus) Class Products
@@ -145,6 +145,16 @@ Method New(cFilial, cCodigo, cDescricao, cValor, cProduto, cStatus) Class Produc
 Return(Self)
 ```
 
+```
+WSRESTFUL products DESCRIPTION "Product REST API"
+
+    WSDATA offset As Integer
+    WSDATA limit As Integer
+
+    WSMETHOD GET DESCRIPTION "Get list of brands" WSSYNTAX "/brands"
+
+END WSRESTFUL 
+```
 
 ### Compilação
 [To Do]
