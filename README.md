@@ -11,14 +11,14 @@ Nas aulas tem o básico da sintaxe da linguagem AdvPL, porém é possível acess
 Como visto no treinamento (caso não tenha participado do treinamento, você pode acessá-lo através desse link: [Treinamento_Protheus](https://drive.google.com/drive/u/0/folders/1qQ28BIS-p4wHPqf6MdBrkGqAwPZyPdLh)), o sistema protheus possui algumas configurações de conexão de ambiente que precisam ser feitas antes de o ambiente ficar pronto para desenvolvimento. É necessário se atentar nos seguintes pontos:
 
 #### Artefatos Protheus:
-- Pasta smartclient com executável da versão que o cliente está usando, com informações de acesso ao server (smartclient.ini configurado)
-- Includes que o cliente usa
-- Enviar IP e porta do server
-- Enviar IP e porta REST
-- Acesso VPN para acessarmos o server ou exposto em IP público
-- Criar usuário no protheus para o dev
-- Ambiente de homologação:
-- Server dedicado para o dev poder compilar as APIs a qualquer momento
+- Pasta smartclient com executável da versão que o cliente está usando, com informações de acesso ao server (smartclient.ini configurado pelo cliente)
+- Pasta Includes
+- IP e porta do server
+- IP e porta REST
+- Acesso VPN
+- Criar usuário no protheus para o desenvolvedor
+- Ambiente de homologação
+- Server dedicado para compilação
 - Base de dados dedicada para homologação (desejável)
 - Acesso total ao servidor, inclusive para alterarmos o appserver.ini, pois é necessário desabilitar o REST para compilar e habilitar para consumir a API (será explicado mais adiante)
 - Ter ponto focal de Protheus no lado do cliente
@@ -88,6 +88,17 @@ Depois:
 ![environment setado](https://user-images.githubusercontent.com/51421653/84517992-6529ac80-aca6-11ea-82d2-bd1eb0fcb63a.PNG)
 
 Pronto! agora você está pronto para desenvolver.
+
+### Primeira API
+
+Primeiro, começaremos com os imports da pasta Includes que o cliente enviar;
+
+```
+#INCLUDE "TOTVS.CH"
+#INCLUDE "RESTFUL.CH"
+#INCLUDE "PROTHEUS.CH"
+#INCLUDE "TBICONN.CH"
+```
 
 ### Compilação
 [To Do]
