@@ -50,23 +50,23 @@ Após estarmos conectados à VPN e termos todas as premissas em mãos, podemos c
     "advpl.selectedEnvironment": "TESTE"
 }
 ```
-- SmartClientPath: 
+- <b>SmartClientPath:</b> 
     - Caminho absoluto da pasta "smartclient" em seu computador
-- Environment:
+- <b>Environment:</b>
     - Nome do ambiente do cliente
-- IncludeList:
+- <b>IncludeList:</b>
     - Caminho absoluto da pasta "include" em seu computador
-- Server:
+- <b>Server:</b>
     - IP do servidor
-- Port:
+- <b>Port:</b>
     - Porta do servidor
-- User: 
+- <b>User:</b>
     - Usuário para acesso ao servidor
-- PasswordCipher: 
+- <b>PasswordCipher:</b> 
     - Senha para acesso ao servidor
-- Advpl.workspaceFolders:
+- <b>Advpl.workspaceFolders:</b>
     - Caminho absoluto da pasta onde você irá armazenar os códigos
-- Advpl.selectedEnvironment:
+- <b>Advpl.selectedEnvironment:</b>
     - Sugiro colocar o nome do ambiente do cliente novamente
 
 Para finalizarmos a configuração do .vscode, nós temos que seguir um processo de encriptação de senha, para isso, abra o console do vscode
@@ -91,7 +91,7 @@ Pronto! agora você está pronto para desenvolver.
 
 ### Primeira API
 
-Primeiro, começaremos com alguns imports necessários para a contrução da API;
+Primeiro, começaremos com alguns imports necessários para a contrução da API:
 
 ```
 #INCLUDE "TOTVS.CH"
@@ -100,7 +100,7 @@ Primeiro, começaremos com alguns imports necessários para a contrução da API
 #INCLUDE "TBICONN.CH"
 ```
 
-Agora, precisamos criar uma função para a compilação no RPO, a função pode ser vazia, é apenas para ser chamada no momento da compilação;
+Agora, precisamos criar uma função para a compilação no RPO, a função pode ser vazia, é apenas para ser chamada no momento da compilação:
 
 ```
 User Function apiProduct()
@@ -108,7 +108,7 @@ User Function apiProduct()
 Return
 ```
 
-Agora, precisamos criar uma classe para a montagem do objeto de resposta da nossa API. É possível montar o objeto de uma maneira mais grosseira, porém, esse é o melhor caminho;
+Agora, precisamos criar uma classe para a montagem do objeto de resposta da nossa API. É possível montar o objeto de uma maneira mais grosseira, porém, esse é o melhor caminho:
 
 <b>Classe:</b>
 
@@ -128,7 +128,7 @@ End Class
 ```
 
 <b>Metodo:</b><br>
-(Utilizamos as mesmas variaveis na classe);
+(Utilizamos as mesmas variaveis na classe):
 
 _o 'c' que antecede todas as variaveis abaixo é para explicar o tipo do dado, exemplo:_<br>
 <b>A</b> = Array.<br>
@@ -155,7 +155,7 @@ Method New(cFilial, cCodigo, cDescricao, cValor, cProduto, cStatus) Class Produc
 Return(Self)
 ```
 
-Chegou a hora de criarmos a primeira rota da nossa API;
+Chegou a hora de criarmos a primeira rota da nossa API:
 
 <b>WSRESTFUL</b> -> Nome semântico da rota.<br>
 <b>DESCRIPTION</b> -> Descrição da rota.<br>
@@ -182,7 +182,7 @@ Neste passo, estaremos escrevendo o que a nossa rota irá fazer.<br>
 Em seguida, declaramos as variaveis locais que utilizaremos dentro do contexto da rota. <br>
 <b>offset</b> e <b>limit</b> estão em <b>DEFAULT</b> para definir o valor padrão caso não seja informado pela querystring durante a chamada do usuário. (Utilizaremos para paginação de resultados);
 
-E por fim, setamos o tipo do conteudo (SetContentType);
+E por fim, setamos o tipo do conteudo (<b>SetContentType</b>):
 
 ```
 WSMETHOD GET WSRECEIVE offset, limit, id WSSERVICE products
@@ -196,7 +196,7 @@ WSMETHOD GET WSRECEIVE offset, limit, id WSSERVICE products
     ::SetContentType("application/json")
 ```
 
-Agora, faremos a chamada no banco de dados para buscar as informações solicitadas;
+Agora, faremos a chamada no banco de dados para buscar as informações solicitadas:
 
 <b>GetArea</b> -> Uilizada para proteger e preservar o ambiente ativo quando houver a necessidade de algum processamento específico.<br>
 <b>GetNextAlias</b> -> Busca um alias disponível para utilização.<br> 
@@ -229,7 +229,7 @@ DbUseArea(.F., 'TOPCONN', TcGenQry(,,cQuery), (cAliasZJ), .F., .T.)
 (cAliasZJ)->(dbGoTop())
 ```
 
-Antes de começarmos a lógica de paginação, precisamos validar se a busca possui dados;
+Antes de começarmos a lógica de paginação, precisamos validar se a busca possui dados:<br>
 <b>EMPTY</b> -> Função que valida se o dado é igual a vazio, ou nulo.<br>
 <b>SetResponse</b> -> Define a resposta da nossa API (Return .T. indica que a chamada foi finalizada e que o código não será mais processado.)<br> 
 
