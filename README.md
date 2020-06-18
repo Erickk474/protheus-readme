@@ -128,11 +128,11 @@ End Class
 
 Metodo: Utilizamos as mesmas variaveis na classe;
 
-_(o 'c' que antecede todas as variaveis abaixo é para explicar o tipo do dado, exemplo:
-c = caractere,
-n = numerico,
-o = objeto, 
-etc...)_
+_(o 'c' que antecede todas as variaveis abaixo é para explicar o tipo do dado, exemplo:_
+_c = caractere,_
+_n = numerico,_
+_o = objeto,_ 
+_etc...)_
 ```
 Method New(cFilial, cCodigo, cDescricao, cValor, cProduto, cStatus) Class Products
 
@@ -146,13 +146,20 @@ Method New(cFilial, cCodigo, cDescricao, cValor, cProduto, cStatus) Class Produc
 Return(Self)
 ```
 
+Chegou a hora de criarmos a primeira rota da nossa API;
+
+_WSRESTFUL -> Nome semântico da rota_
+_DESCRIPTION -> Descrição da rota_
+_WSMETHOD -> Método da rota_
+_WSSYNTAX -> Recurso da rota_
+
 ```
 WSRESTFUL products DESCRIPTION "Product REST API"
 
     WSDATA offset As Integer
     WSDATA limit As Integer
 
-    WSMETHOD GET DESCRIPTION "Get list of brands" WSSYNTAX "/brands"
+    WSMETHOD GET DESCRIPTION "Get list of products" WSSYNTAX "/products"
 
 END WSRESTFUL 
 ```
