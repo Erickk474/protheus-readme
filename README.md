@@ -81,7 +81,7 @@ Agora com o arquivo settings.json aberto utilize o comando Ctrl + P e escreva '>
 
 Após toda a configuração do settings.json, será necessário informar o ambiente em que você está trabalhando, para isso, selecione o ambiente no canto inferior direito do VSCode e uma caixa seletora aparecerá na parte superior, selecione o ambiente (nesse caso é o "TESTE") e pronto. 
 
-![Animated GIF-downsized_large (1)](https://user-images.githubusercontent.com/51421653/85059116-7dec0380-b179-11ea-992c-7f37e4a155e1.gif)
+![Animated GIF-downsized_large (2)](https://user-images.githubusercontent.com/51421653/85059340-d9b68c80-b179-11ea-9f79-3b307d1474b1.gif)
 
 Pronto! agora você está pronto para desenvolver.
 
