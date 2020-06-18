@@ -126,7 +126,8 @@ Class Products
 End Class
 ```
 
-Metodo: Utilizamos as mesmas variaveis na classe;
+Metodo: <br>
+_Utilizamos as mesmas variaveis na classe_;
 
 _o 'c' que antecede todas as variaveis abaixo é para explicar o tipo do dado, exemplo:_<br>
 _c = caractere,_<br>
