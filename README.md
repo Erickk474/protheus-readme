@@ -389,4 +389,7 @@ Return .T.
 ```
 
 ### Compilação
-[To Do]
+
+Chegou a hora de compilarmos o nosso código ao RPO do cliente. Para isso, precisamos ter a conexão com a VPN estabelecida e o acesso à VM do cliente. <b>(Caso não tenha acesso a máquina, o cliente deverá fazer esse processo sempre que você precisar compilar algo).</b>
+
+- 

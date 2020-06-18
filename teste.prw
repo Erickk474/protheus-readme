@@ -20,9 +20,9 @@ Class ProdTex
 
 End Class
 
-Method New(cFilial, cCodigo, cDescricao, cValor, cProduto, cStatus) Class ProdTex
+Method New(cfilial, cCodigo, cDescricao, cValor, cProduto, cStatus) Class ProdTex
 
-    ::filial := cFilial
+    ::filial := cfilial
     ::codigo := cCodigo
     ::descricao := cDescricao
     ::valor := cValor
