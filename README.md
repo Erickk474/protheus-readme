@@ -110,7 +110,8 @@ Return
 
 Agora, precisamos criar uma classe para a montagem do objeto de resposta da nossa API. É possível montar o objeto de uma maneira mais grosseira, porém, esse é o melhor caminho;
 
-Classe: 
+<b>Classe:</b>
+
 ```
 Class Products
 
@@ -126,8 +127,8 @@ Class Products
 End Class
 ```
 
-Metodo: <br>
-_Utilizamos as mesmas variaveis na classe_;
+<b>Metodo:</b><br>
+(Utilizamos as mesmas variaveis na classe);
 
 _o 'c' que antecede todas as variaveis abaixo é para explicar o tipo do dado, exemplo:_<br>
 _c = caractere,_<br>
