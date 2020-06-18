@@ -174,6 +174,7 @@ END WSRESTFUL
 ```
 
 Neste passo, estaremos escrevendo o que a nossa rota irá fazer.<br>
+<br>
 <b>WSMETHOD</b> -> Método da rota que estamos que estamos construindo.<br>
 <b>WSRECEIVE</b> -> Rota poderá receber na queryString.<br>
 <b>WSSERVICE</b> -> Serviço ('products' que criamos anteriormente em 'WSRESTFUL').<br>
@@ -219,25 +220,69 @@ DBUseArea([ lNewArea ], [ cDriver ], < cFile >, < cAlias >, [ lShared ], [ lRead
 ```
 aArea := GetArea()
 
-cAliasZJ := GetNextAlias()
+cAliasAY := GetNextAlias()
 
-cQuery := "SELECT FILIAL, CODIGO, DESCRI, VALOR, CODPRO, STATUS "
+cQuery := "SELECT AY5_FILIAL, AY5_CODIGO, AY5_DESCRI, AY5_VALOR, AY5_CODPRO, AY5_STATUS "
 cQuery += "FROM  " + RetSQLName("AY5")
 
-DbUseArea(.F., 'TOPCONN', TcGenQry(,,cQuery), (cAliasZJ), .F., .T.)
+DbUseArea(.F., 'TOPCONN', TcGenQry(,,cQuery), (cAliasAY), .F., .T.)
 
-(cAliasZJ)->(dbGoTop())
+(cAliasAY)->(dbGoTop())
 ```
 
 Antes de começarmos a lógica de paginação, precisamos validar se a busca possui dados:<br>
+<br>
 <b>EMPTY</b> -> Função que valida se o dado é igual a vazio, ou nulo.<br>
 <b>SetResponse</b> -> Define a resposta da nossa API (Return .T. indica que a chamada foi finalizada e que o código não será mais processado.)<br> 
 
 ```
-If EMPTY((cAliasZJ)->ZJ_DEPART)
+If EMPTY((cAliasAY)->AY5_CODIGO)
     ::SetResponse('{"product": false, "message": "product not found"}')
     Return .T.
 EndIf
+```
+
+Pronto, agora precisamos responder a chamada do usúario conforme a paginação informada:<br>
+
+
+```
+::SetResponse('[')
+
+For nReg := 1 to ::limit    //Declaramos uma variável apenas para iteraração do For sobre o valor informado anteriormente em 'Limit'
+
+    If (cAliasAY)->(EOF())  //Verifica se já estamos no fim do arquivo (EOF -> End of File)
+        Exit                //Exit -> quebra o laço do For
+    EndIf
+
+    //<b>RTRIM</b> -> Função para remover os espaços em brancos excedentes.
+    //<b>cVALTOCHAR</b> -> Função converter o dado de Numeric para Character.
+
+    //Criamos uma variável diferente para cada campo da tabela, para posteriormente montarmos o objeto utilizando a Classe criada.
+    cFILIAL := RTRIM((cAliasAY)->AY5_FILIAL)
+    cCODIGO := RTRIM((cAliasAY)->AY5_CODIGO)
+    cDESC := RTRIM((cAliasAY)->AY5_DESCRI)
+    cVALOR :=  RTRIM(cVALTOCHAR((cAliasAY)->AY5_VALOR))
+    cCODPRO :=  RTRIM(cVALTOCHAR((cAliasAY)->AY5_CODPRO))
+    cSTATUS := RTRIM(cVALTOCHAR((cAliasAY)->AY5_STATUS))
+
+    //Sintaxe para utilização da Classe 'Products' criada no começo, os valores devem ser passados seguindo a ordem.
+    oProducts := Products():New(cFILIAL, cCODIGO, cDESC, cVALOR, cCODPRO, cSTATUS)
+
+    ::SetResponse(oProducts)
+
+    (cAliasAY)->(dbSkip()) //dbSkip -> passa para o próximo dado.
+
+    If nReg != ::limit .And. (cAliasAY)->(!EOF())   //Caso ainda não tiver alcançado o limite da paginação e não
+        ::SetResponse(',')                          //for o fim do arquivo, uma ',' é adicionado para o resultado final.
+    EndIf
+
+Next
+
+::SetResponse(']}')
+
+RestArea(aArea) //Indica que terminamos de utilizar a area reservada
+
+Return .T. //Finaliza o processo da rota.
 ```
 
 ### Compilação
