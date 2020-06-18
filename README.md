@@ -192,9 +192,11 @@ Agora, faremos a chamada no banco de dados para buscar as informações solicita
 GetArea -> <br>
 GetNextAlias -> <br> 
 cQuery -> query formada para a chamada no banco de dados. <br>
-<ul>
 DbUseArea -> parametros informados para a execução da chamada (para suas próximas chamadas).<br>
-<b>DBUseArea([ lNewArea ], [ cDriver ], < cFile >, < cAlias >, [ lShared ], [ lReadOnly ]).</b>
+<ul>
+```
+DBUseArea([ lNewArea ], [ cDriver ], < cFile >, < cAlias >, [ lShared ], [ lReadOnly ]).
+```
 <li>lNewArea -> Caso verdadeiro, indica que a tabela deve ser aberta em uma nova workarea (Default=.F.)</li>
 <li>cDriver -> Informa o Driver (RDD) a ser utilizada para a abertura da tabela. Caso não especificado (NIL), será usado o driver default de acesso a arquivos locais.</li>
 <li>cFile -> Nome da arquivo/tabela a ser aberta. Caso o driver utilizado acesse tabelas no sistema de arquivos, deve ser informado um path no servidor de aplicação. Não é possível abrir tabelas de dados no SmartClient.</li>
