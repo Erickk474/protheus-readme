@@ -171,7 +171,7 @@ WSRECEIVE -> Rota poderá receber na queryString.<br>
 WSSERVICE -> Serviço ('products' que criamos anteriormente em 'WSRESTFUL').<br>
 
 Em seguida, declaramos as variaveis locais que utilizaremos dentro do contexto da rota. <br>
-*offset* e *limit* estão em DEFAULT para definir o valor padrão caso não seja informado pela querystring durante a chamada do usuário. (Utilizaremos para paginação de resultados);
+<b>offset<b> e <b>limit<b> estão em DEFAULT para definir o valor padrão caso não seja informado pela querystring durante a chamada do usuário. (Utilizaremos para paginação de resultados);
 
 E por fim, setamos o tipo do conteudo (SetContentType);
 
