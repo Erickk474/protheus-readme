@@ -127,6 +127,7 @@ End Class
 ```
 
 Metodo: Utilizamos as mesmas variaveis na classe;
+
 _(o 'c' que antecede todas as variaveis abaixo é para explicar o tipo do dado, exemplo:
 c = caractere,
 n = numerico,
