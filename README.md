@@ -91,7 +91,7 @@ Pronto! agora você está pronto para desenvolver.
 
 ### Primeira API
 
-Primeiro, começaremos com os imports da pasta Includes que o cliente enviar seguindo essa sintaxe;
+Primeiro, começaremos com alguns imports necessários para a contrução da API;
 
 ```
 #INCLUDE "TOTVS.CH"
@@ -131,10 +131,17 @@ End Class
 (Utilizamos as mesmas variaveis na classe);
 
 _o 'c' que antecede todas as variaveis abaixo é para explicar o tipo do dado, exemplo:_<br>
-_c = caractere,_<br>
-_n = numerico,_<br>
-_o = objeto,_ <br>
+<b>A</b> = Array.<br>
+<b>B</b> = Code Block.<br>
+<b>C</b> = Character.<br>
+<b>D</b> = Date.<br>
+<b>F</b> = Float.<br>
+<b>L</b> = Logical.<br>
+<b>N</b> = Numeric.<br>
+<b>O</b> = Object.<br>
+<b>U</b> = Undefined.<br>
 _etc...)_
+
 ```
 Method New(cFilial, cCodigo, cDescricao, cValor, cProduto, cStatus) Class Products
 
@@ -150,11 +157,11 @@ Return(Self)
 
 Chegou a hora de criarmos a primeira rota da nossa API;
 
-WSRESTFUL -> Nome semântico da rota.<br>
-DESCRIPTION -> Descrição da rota.<br>
-WSMETHOD -> Método da rota.<br>
-WSSYNTAX -> Recurso da rota.<br>
-WSDATA -> Parâmetros da rota.<br>
+<b>WSRESTFUL</b> -> Nome semântico da rota.<br>
+<b>DESCRIPTION</b> -> Descrição da rota.<br>
+<b>WSMETHOD</b> -> Método da rota.<br>
+<b>WSSYNTAX</b> -> Recurso da rota.<br>
+<b>WSDATA</b> -> Parâmetros da rota.<br>
 
 ```
 WSRESTFUL products DESCRIPTION "Product REST API"
@@ -168,9 +175,9 @@ END WSRESTFUL
 ```
 
 Neste passo, estaremos escrevendo o que a nossa rota irá fazer.<br>
-WSMETHOD GET -> Rota que estamos que estamos construindo.<br>
-WSRECEIVE -> Rota poderá receber na queryString.<br>
-WSSERVICE -> Serviço ('products' que criamos anteriormente em 'WSRESTFUL').<br>
+<b>WSMETHOD</b> -> Método da rota que estamos que estamos construindo.<br>
+<b>WSRECEIVE</b> -> Rota poderá receber na queryString.<br>
+<b>WSSERVICE</b> -> Serviço ('products' que criamos anteriormente em 'WSRESTFUL').<br>
 
 Em seguida, declaramos as variaveis locais que utilizaremos dentro do contexto da rota. <br>
 <b>offset</b> e <b>limit</b> estão em <b>DEFAULT</b> para definir o valor padrão caso não seja informado pela querystring durante a chamada do usuário. (Utilizaremos para paginação de resultados);
@@ -191,11 +198,11 @@ WSMETHOD GET WSRECEIVE offset, limit, id WSSERVICE products
 
 Agora, faremos a chamada no banco de dados para buscar as informações solicitadas;
 
-GetArea -> Uilizada para proteger e preservar o ambiente ativo quando houver a necessidade de algum processamento específico.<br>
-GetNextAlias -> Busca um alias disponível para utilização.<br> 
-cQuery -> Query formada para a chamada no banco de dados.<br>
-dbGoTop -> Move para o primeiro registro.<br>
-RetSQLName -> Nome da tabela que será consultada (nesse guia estou utilizando uma tabela padrão do protheus, você pode consultar mais tabelas aqui: [Tabelas](https://terminaldeinformacao.com/wp-content/tabelas/ay5.php)).<br>
+<b>GetArea</b> -> Uilizada para proteger e preservar o ambiente ativo quando houver a necessidade de algum processamento específico.<br>
+<b>GetNextAlias</b> -> Busca um alias disponível para utilização.<br> 
+<b>cQuery</b> -> Query formada para a chamada no banco de dados.<br>
+<b>dbGoTop</b> -> Move para o primeiro registro.<br>
+<b>RetSQLName</b> -> Nome da tabela que será consultada (nesse guia estou utilizando uma tabela padrão do protheus, você pode consultar mais tabelas aqui: [Tabelas](https://terminaldeinformacao.com/wp-content/tabelas/ay5.php)).<br>
 DbUseArea -> parametros informados para a execução da chamada (para suas próximas chamadas).<br>
 ```
 DBUseArea([ lNewArea ], [ cDriver ], < cFile >, < cAlias >, [ lShared ], [ lReadOnly ]).
@@ -223,8 +230,8 @@ DbUseArea(.F., 'TOPCONN', TcGenQry(,,cQuery), (cAliasZJ), .F., .T.)
 ```
 
 Antes de começarmos a lógica de paginação, precisamos validar se a busca possui dados;
-EMPTY -> Função que valida se o dado é igual a vazio, ou nulo.<br>
-SetResponse -> Define a resposta da nossa API (Return .T. indica que a chamada foi finalizada e que o código não será mais processado.)<br> 
+<b>EMPTY</b> -> Função que valida se o dado é igual a vazio, ou nulo.<br>
+<b>SetResponse</b> -> Define a resposta da nossa API (Return .T. indica que a chamada foi finalizada e que o código não será mais processado.)<br> 
 
 ```
 If EMPTY((cAliasZJ)->ZJ_DEPART)
