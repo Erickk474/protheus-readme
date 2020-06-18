@@ -189,9 +189,9 @@ WSMETHOD GET WSRECEIVE offset, limit, id WSSERVICE products
 
 Agora, faremos a chamada no banco de dados para buscar as informações solicitadas;
 
-GetArea ->
-GetNextAlias -> 
-cQuery -> query formada para a chamada no banco de dados
+GetArea -> <br>
+GetNextAlias -> <br> 
+cQuery -> query formada para a chamada no banco de dados. <br>
 <ul>
 DbUseArea -> parametros informados para a execução da chamada (para suas próximas chamadas)
 <b>DBUseArea([ lNewArea ], [ cDriver ], < cFile >, < cAlias >, [ lShared ], [ lReadOnly ]).</b>
