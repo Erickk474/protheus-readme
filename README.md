@@ -171,7 +171,7 @@ WSRECEIVE -> Rota poderá receber na queryString.<br>
 WSSERVICE -> Serviço ('products' que criamos anteriormente em 'WSRESTFUL').<br>
 
 Em seguida, declaramos as variaveis locais que utilizaremos dentro do contexto da rota. <br>
-<b>offset</b> e <b>limit</b> estão em DEFAULT para definir o valor padrão caso não seja informado pela querystring durante a chamada do usuário. (Utilizaremos para paginação de resultados);
+<b>offset</b> e <b>limit</b> estão em <b>DEFAULT</b> para definir o valor padrão caso não seja informado pela querystring durante a chamada do usuário. (Utilizaremos para paginação de resultados);
 
 E por fim, setamos o tipo do conteudo (SetContentType);
 
@@ -180,13 +180,39 @@ WSMETHOD GET WSRECEIVE offset, limit, id WSSERVICE products
     
     Local oProduct
     Local aArea := {}
-    Local lAuthorized := .F.
-    Local cAuth := ""
     Local cQuery := ""
     
     DEFAULT ::offset := 0, ::limit := 20
 
     ::SetContentType("application/json")
+```
+
+Agora, faremos a chamada no banco de dados para buscar as informações solicitadas;
+
+GetArea ->
+GetNextAlias -> 
+cQuery -> query formada para a chamada no banco de dados
+<ul>
+DbUseArea -> parametros informados para a execução da chamada (para suas próximas chamadas)
+<b>DBUseArea([ lNewArea ], [ cDriver ], < cFile >, < cAlias >, [ lShared ], [ lReadOnly ]).</b>
+<li>lNewArea -> Caso verdadeiro, indica que a tabela deve ser aberta em uma nova workarea (Default=.F.)</li>
+<li>cDriver -> Informa o Driver (RDD) a ser utilizada para a abertura da tabela. Caso não especificado (NIL), será usado o driver default de acesso a arquivos locais.</li>
+<li>cFile -> Nome da arquivo/tabela a ser aberta. Caso o driver utilizado acesse tabelas no sistema de arquivos, deve ser informado um path no servidor de aplicação. Não é possível abrir tabelas de dados no SmartClient.</li>
+<li>cAlias -> Nome dado ao ALIAS desta tabela, para ser referenciado no programa Advpl.</li>
+<li>lShared -> Caso verdadeiro, indica que a tabela deve ser aberta em modo compartilhado, isto é, outros processos também poderão abrir esta tabela.</li>
+<li>lReadOnly -> Caso verdadeiro, indica que este alias será usado apenas para leitura de dados. Caso contrário, estas operações serão permitidas.</li>
+</ul>
+
+```
+aArea := GetArea()
+
+cAliasZJ := GetNextAlias()
+
+cQuery := "SELECT P1.ZJ_IDVTEX AS ZJ_IDVTEX, P1.ZJ_PRODUTO AS ZJ_PRODUTO, "
+cQuery += "P1.ZJ_DESC AS ZJ_DESC, P1.ZJ_DESCSKU AS ZJ_DESCSKU, P1.ZJ_CODBAR AS ZJ_CODBAR, "
+cQuery += "P1.ZJ_REFSKU AS ZJ_REFSKU, P1.ZJ_PESO AS ZJ_PESO, P1.ZJ_ALTURA AS ZJ_ALTURA, "
+
+DbUseArea(.F., 'TOPCONN', TcGenQry(,,cQuery), (cAliasZJ), .F., .T.)
 ```
 
 ### Compilação
