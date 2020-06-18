@@ -91,7 +91,7 @@ Pronto! agora você está pronto para desenvolver.
 
 ### Primeira API
 
-Primeiro, começaremos com os imports da pasta Includes que o cliente enviar;
+Primeiro, começaremos com os imports da pasta Includes que o cliente enviar seguindo essa sintaxe;
 
 ```
 #INCLUDE "TOTVS.CH"
@@ -99,6 +99,52 @@ Primeiro, começaremos com os imports da pasta Includes que o cliente enviar;
 #INCLUDE "PROTHEUS.CH"
 #INCLUDE "TBICONN.CH"
 ```
+
+Agora, precisamos criar uma função para a compilação no RPO, a função pode ser vazia, é apenas para ser chamada no momento da compilação;
+
+```
+User Function apiProduct()
+
+Return
+```
+
+Agora, precisamos criar uma classe para a montagem do objeto de resposta da nossa API. É possível montar o objeto de uma maneira mais grosseira, porém, esse é o melhor caminho;
+
+Classe: 
+```
+Class Products
+
+    Data filial As String
+    Data codigo As String
+    Data descricao As String
+    Data valor As String
+    Data produto As String
+    Data status As String
+
+    Method New(filial, codigo, descricao, valor, produto, status) Constructor 
+
+End Class
+```
+
+Metodo: 
+_(o 'c' que antecede todas as variaveis abaixo é para explicar o tipo do dado, exemplo:
+c = caractere
+n = numerico
+o = objeto 
+etc...)_
+```
+Method New(cFilial, cCodigo, cDescricao, cValor, cProduto, cStatus) Class Products
+
+    ::filial := cFilial
+    ::codigo := cCodigo
+    ::descricao := cDescricao
+    ::valor := cValor
+    ::produto := cProduto
+    ::status := cStatus
+
+Return(Self)
+```
+
 
 ### Compilação
 [To Do]
