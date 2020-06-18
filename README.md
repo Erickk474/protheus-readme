@@ -208,12 +208,12 @@ DbUseArea -> parametros informados para a execução da chamada (para suas próx
 DBUseArea([ lNewArea ], [ cDriver ], < cFile >, < cAlias >, [ lShared ], [ lReadOnly ]).
 ```
 <ul>
-<li>lNewArea -> Caso verdadeiro, indica que a tabela deve ser aberta em uma nova workarea (Default=.F.)</li>
-<li>cDriver -> Informa o Driver (RDD) a ser utilizada para a abertura da tabela. Caso não especificado (NIL), será usado o driver default de acesso a arquivos locais.</li>
-<li>cFile -> Nome da arquivo/tabela a ser aberta. Caso o driver utilizado acesse tabelas no sistema de arquivos, deve ser informado um path no servidor de aplicação. Não é possível abrir tabelas de dados no SmartClient.</li>
-<li>cAlias -> Nome dado ao ALIAS desta tabela, para ser referenciado no programa Advpl.</li>
-<li>lShared -> Caso verdadeiro, indica que a tabela deve ser aberta em modo compartilhado, isto é, outros processos também poderão abrir esta tabela.</li>
-<li>lReadOnly -> Caso verdadeiro, indica que este alias será usado apenas para leitura de dados. Caso contrário, estas operações serão permitidas.</li>
+<li><b>lNewArea</b> -> Caso verdadeiro, indica que a tabela deve ser aberta em uma nova workarea (Default=.F.)</li>
+<li><b>cDriver</b> -> Informa o Driver (RDD) a ser utilizada para a abertura da tabela. Caso não especificado (NIL), será usado o driver default de acesso a arquivos locais.</li>
+<li><b>cFile</b> -> Nome da arquivo/tabela a ser aberta. Caso o driver utilizado acesse tabelas no sistema de arquivos, deve ser informado um path no servidor de aplicação. Não é possível abrir tabelas de dados no SmartClient.</li>
+<li><b>cAlias</b> -> Nome dado ao ALIAS desta tabela, para ser referenciado no programa Advpl.</li>
+<li><b>lShared</b> -> Caso verdadeiro, indica que a tabela deve ser aberta em modo compartilhado, isto é, outros processos também poderão abrir esta tabela.</li>
+<li><b>lReadOnly</b> -> Caso verdadeiro, indica que este alias será usado apenas para leitura de dados. Caso contrário, estas operações serão permitidas.</li>
 </ul>
 
 ```
