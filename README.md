@@ -31,8 +31,8 @@ Após estarmos conectados à VPN e termos todas as premissas em mãos, podemos c
     - Abra o tópico "Text Editor" e abaixo de "Code Actions on Save" clique em "Edit in Settings.json". Isso gerará uma pasta .vscode com um arquivo "settings.json"
     - Configure o "settings.json" seguindo o modelo abaixo: 
 
-![Animated GIF-source](https://user-images.githubusercontent.com/51421653/85056918-69f2d280-b176-11ea-82e7-74d313abeab0.gif)
-<iframe src="https://giphy.com/embed/IeulWeYtHh9LdyqBmL" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/IeulWeYtHh9LdyqBmL">via GIPHY</a></p>
+![Animated GIF-downsized_large](https://user-images.githubusercontent.com/51421653/85057470-26e52f00-b177-11ea-86cd-182b936d5091.gif)
+
 
 ```
 {
