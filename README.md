@@ -148,11 +148,11 @@ Return(Self)
 
 Chegou a hora de criarmos a primeira rota da nossa API;
 
-_WSRESTFUL -> Nome semântico da rota._<br>
-_DESCRIPTION -> Descrição da rota._<br>
-_WSMETHOD -> Método da rota._<br>
-_WSSYNTAX -> Recurso da rota._<br>
-_WSDATA -> Parâmetros da rota._<br>
+WSRESTFUL -> Nome semântico da rota.<br>
+DESCRIPTION -> Descrição da rota.<br>
+WSMETHOD -> Método da rota.<br>
+WSSYNTAX -> Recurso da rota.<br>
+WSDATA -> Parâmetros da rota.<br>
 
 ```
 WSRESTFUL products DESCRIPTION "Product REST API"
@@ -166,9 +166,14 @@ END WSRESTFUL
 ```
 
 Neste passo, estaremos escrevendo o que a nossa rota irá fazer.<br>
-_WSMETHOD GET -> dizemos qual a rota que estamos que estamos construindo._<br>
-_WSRECEIVE -> Em seguida, dizemos o que a rota poderá receber na queryString._<br>
-_WSSERVICE -> dizemos qual é o serviço (_'products'_ que criamos anteriormente)._<br>
+WSMETHOD GET -> Rota que estamos que estamos construindo.<br>
+WSRECEIVE -> Rota poderá receber na queryString.<br>
+WSSERVICE -> Serviço ('products' que criamos anteriormente em 'WSRESTFUL').<br>
+
+Em seguida, declaramos as variaveis locais que utilizaremos dentro do contexto da rota. <br>
+*offset* e *limit* estão em DEFAULT para definir o valor padrão caso não seja informado pela querystring durante a chamada do usuário. (Utilizaremos para paginação de resultados);
+
+E por fim, setamos o tipo do conteudo (SetContentType);
 
 ```
 WSMETHOD GET WSRECEIVE offset, limit, id WSSERVICE products
