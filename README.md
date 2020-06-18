@@ -203,6 +203,7 @@ Agora, faremos a chamada no banco de dados para buscar as informações solicita
 <b>cQuery</b> -> Query formada para a chamada no banco de dados.<br>
 <b>dbGoTop</b> -> Move para o primeiro registro.<br>
 <b>RetSQLName</b> -> Nome da tabela que será consultada (nesse guia estou utilizando uma tabela padrão do protheus, você pode consultar mais tabelas aqui: [Tabelas](https://terminaldeinformacao.com/wp-content/tabelas/ay5.php)).<br>
+<a href="https://terminaldeinformacao.com/wp-content/tabelas/ay5.php" target="_blank">Hello, world!</a>
 DbUseArea -> parametros informados para a execução da chamada (para suas próximas chamadas).<br>
 ```
 DBUseArea([ lNewArea ], [ cDriver ], < cFile >, < cAlias >, [ lShared ], [ lReadOnly ]).
