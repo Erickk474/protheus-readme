@@ -189,9 +189,11 @@ WSMETHOD GET WSRECEIVE offset, limit, id WSSERVICE products
 
 Agora, faremos a chamada no banco de dados para buscar as informações solicitadas;
 
-GetArea -> <br>
-GetNextAlias -> <br> 
-cQuery -> query formada para a chamada no banco de dados. <br>
+GetArea -> Uilizada para proteger e preservar o ambiente ativo quando houver a necessidade de algum processamento específico.<br>
+GetNextAlias -> Busca um alias disponível para utilização.<br> 
+cQuery -> Query formada para a chamada no banco de dados.<br>
+dbGoTop -> Move para o primeiro registro.<br>
+RetSQLName -> Nome da tabela que será consultada (nesse guia estou utilizando uma tabela padrão do protheus, você pode consultar mais tabelas aqui: [Tabelas](https://terminaldeinformacao.com/wp-content/tabelas/ay5.php)).<br>
 DbUseArea -> parametros informados para a execução da chamada (para suas próximas chamadas).<br>
 ```
 DBUseArea([ lNewArea ], [ cDriver ], < cFile >, < cAlias >, [ lShared ], [ lReadOnly ]).
@@ -210,11 +212,23 @@ aArea := GetArea()
 
 cAliasZJ := GetNextAlias()
 
-cQuery := "SELECT P1.ZJ_IDVTEX AS ZJ_IDVTEX, P1.ZJ_PRODUTO AS ZJ_PRODUTO, "
-cQuery += "P1.ZJ_DESC AS ZJ_DESC, P1.ZJ_DESCSKU AS ZJ_DESCSKU, P1.ZJ_CODBAR AS ZJ_CODBAR, "
-cQuery += "P1.ZJ_REFSKU AS ZJ_REFSKU, P1.ZJ_PESO AS ZJ_PESO, P1.ZJ_ALTURA AS ZJ_ALTURA, "
+cQuery := "SELECT FILIAL, CODIGO, DESCRI, VALOR, CODPRO, STATUS "
+cQuery += "FROM  " + RetSQLName("AY5")
 
 DbUseArea(.F., 'TOPCONN', TcGenQry(,,cQuery), (cAliasZJ), .F., .T.)
+
+(cAliasZJ)->(dbGoTop())
+```
+
+Antes de começarmos a lógica de paginação, precisamos validar se a busca possui dados;
+EMPTY -> Função que valida se o dado é igual a vazio, ou nulo.<br>
+SetResponse -> Define a resposta da nossa API (Return .T. indica que a chamada foi finalizada e que o código não será mais processado.)<br> 
+
+```
+If EMPTY((cAliasZJ)->ZJ_DEPART)
+    ::SetResponse('{"product": false, "message": "product not found"}')
+    Return .T.
+EndIf
 ```
 
 ### Compilação
