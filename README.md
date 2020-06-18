@@ -32,6 +32,7 @@ Após estarmos conectados à VPN e termos todas as premissas em mãos, podemos c
     - Configure o "settings.json" seguindo o modelo abaixo: 
 
 ![Animated GIF-source](https://user-images.githubusercontent.com/51421653/85056918-69f2d280-b176-11ea-82e7-74d313abeab0.gif)
+<iframe src="https://giphy.com/embed/IeulWeYtHh9LdyqBmL" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/IeulWeYtHh9LdyqBmL">via GIPHY</a></p>
 
 ```
 {
