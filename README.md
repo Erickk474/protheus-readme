@@ -29,8 +29,9 @@ Após estarmos conectados à VPN e termos todas as premissas em mãos, podemos c
 - Crie uma pasta para o código do seu projeto
     - No VSCode, abra a pasta do código, clique com o botão direito e abra "Open Folder Settings"
     - Abra o tópico "Text Editor" e abaixo de "Code Actions on Save" clique em "Edit in Settings.json". Isso gerará uma pasta .vscode com um arquivo "settings.json"
-    - ![vscode settings](https://user-images.githubusercontent.com/51421653/84521615-a83a4e80-acab-11ea-9bbd-122ea0cb7c9b.PNG)
     - Configure o "settings.json" seguindo o modelo abaixo: 
+
+![Animated GIF-source](https://user-images.githubusercontent.com/51421653/85056918-69f2d280-b176-11ea-82e7-74d313abeab0.gif)
 
 ```
 {
@@ -383,7 +384,7 @@ WSMETHOD GET WSRECEIVE offset, limit, id WSSERVICE products
 
     Next
 
-    ::SetResponse(']}')
+    ::SetResponse(']')
 
     RestArea(aArea)
 

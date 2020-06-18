@@ -3,11 +3,11 @@
 #INCLUDE "PROTHEUS.CH"
 #INCLUDE "TBICONN.CH"
 
-User Function apiProduct()
+User Function apiTutos()
 
 Return
 
-Class Products
+Class ProdTex
 
     Data filial As String
     Data codigo As String
@@ -20,7 +20,7 @@ Class Products
 
 End Class
 
-Method New(cFilial, cCodigo, cDescricao, cValor, cProduto, cStatus) Class Products
+Method New(cFilial, cCodigo, cDescricao, cValor, cProduto, cStatus) Class ProdTex
 
     ::filial := cFilial
     ::codigo := cCodigo
@@ -31,16 +31,16 @@ Method New(cFilial, cCodigo, cDescricao, cValor, cProduto, cStatus) Class Produc
 
 Return(Self)
 
-WSRESTFUL products DESCRIPTION "Product REST API"
+WSRESTFUL ProdTexs DESCRIPTION "Product REST API"
 
     WSDATA offset As Integer
     WSDATA limit As Integer
 
-    WSMETHOD GET DESCRIPTION "Get list of products" WSSYNTAX "/products"
+    WSMETHOD GET DESCRIPTION "Get list of products" WSSYNTAX "/ProdTexs"
 
 END WSRESTFUL 
 
-WSMETHOD GET WSRECEIVE offset, limit, id WSSERVICE products
+WSMETHOD GET WSRECEIVE offset, limit, id WSSERVICE ProdTexs
     
     Local oProduct
     Local aArea := {}
@@ -81,7 +81,7 @@ WSMETHOD GET WSRECEIVE offset, limit, id WSSERVICE products
         cCODPRO :=  RTRIM(cVALTOCHAR((cAliasAY)->AY5_CODPRO))
         cSTATUS := RTRIM(cVALTOCHAR((cAliasAY)->AY5_STATUS))
 
-        oProducts := Products():New(cFILIAL, cCODIGO, cDESC, cVALOR, cCODPRO, cSTATUS)
+        oProducts := ProdTex():New(cFILIAL, cCODIGO, cDESC, cVALOR, cCODPRO, cSTATUS)
 
         ::SetResponse(oProducts)
 
@@ -93,7 +93,7 @@ WSMETHOD GET WSRECEIVE offset, limit, id WSSERVICE products
 
     Next
 
-    ::SetResponse(']}')
+    ::SetResponse(']')
 
     RestArea(aArea)
 
