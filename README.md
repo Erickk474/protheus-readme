@@ -151,6 +151,8 @@ Method New(cFilial, cCodigo, cDescricao, cValor, cProduto, cStatus) Class Produc
 Return(Self)
 ```
 
+<b>Lembre-se, é necessário passar todos os parametros na ordem correta!<b>
+
 Chegou a hora de criarmos a primeira rota da nossa API:
 
 <b>WSRESTFUL</b> -> Nome semântico da rota.<br>
@@ -390,7 +392,39 @@ Return .T.
 
 ### Compilação
 
-Chegou a hora de compilarmos o nosso código ao RPO do cliente. Para isso, precisamos ter a conexão com a VPN estabelecida e o acesso à VM do cliente. <br>
+Chegou a hora de compilarmos o nosso código ao RPO do cliente. Para isso, precisamos ter a conexão com a VPN estabelecida, acesso à VM do cliente e algumas premissas dos arquivos como: <br>
+- Nome do serviço do appserver. <br>
+- Caminho das pastas até o appserver.ini<br>
+
 <b>(Caso não tenha acesso a máquina, o cliente deverá fazer esse processo sempre que você precisar compilar algo).</b>
 
-- 
+- No gerenciador de tarefas, abra a aba serviços.
+- Abrir serviços.
+- Pare o serviço do appserver do cliente.
+- Vá até a pasta do appserver.ini e abra o arquivo.
+
+![onstart](https://user-images.githubusercontent.com/51421653/89691352-25b2c180-d8df-11ea-8b21-1c32590182b2.png)
+
+- Procure por "ONSTART" e comente utilizando ";". Deverá ficar assim:
+
+![ostartcoment](https://user-images.githubusercontent.com/51421653/89691386-3ebb7280-d8df-11ea-8275-a89d2867aa3f.PNG)
+
+- Salve o arquivo e abra o appserver.exe. O cmd deverá abrir assim: 
+
+![serversemrest](https://user-images.githubusercontent.com/51421653/89691430-5266d900-d8df-11ea-8507-3936078e698d.PNG)
+
+Pronto! Agora você pode voltar ao vscode, e no arquivo que você quer compilar, abra o console, <b>clique no arquivo novamente<b>,  e aperte Ctrl + F9.
+A resposta de sucesso será parecida com essa:
+
+![Compilacao](https://user-images.githubusercontent.com/51421653/89691516-7cb89680-d8df-11ea-9542-f7061eb00c20.PNG)
+
+Agora, para testar:
+- Volte para a VM.
+- Pare o servidor.
+- Descomente o 'onstart'.
+- Salve o arquivo.
+- Rode o servidor novamente, agora o rest deverá subir junto e mostrar essa mensagem:
+
+![REST](https://user-images.githubusercontent.com/51421653/89691406-467b1700-d8df-11ea-97b1-a2e85d48cc4b.png)
+
+## Pronto! agora você sabe tudo o que precisa para desenvolver uma api em Advpl. Boa sorte!
