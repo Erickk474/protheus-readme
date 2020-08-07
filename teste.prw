@@ -42,7 +42,6 @@ END WSRESTFUL
 
 WSMETHOD GET WSRECEIVE offset, limit, id WSSERVICE ProdTexs
     
-    Local oProduct
     Local aArea := {}
     Local cQuery := ""
     

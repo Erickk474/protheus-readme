@@ -71,6 +71,10 @@ Após estarmos conectados à VPN e termos todas as premissas em mãos, podemos c
 - <b>Advpl.selectedEnvironment:</b>
     - Sugiro colocar o nome do ambiente do cliente novamente
 
+Após toda a configuração do settings.json, será necessário informar o ambiente em que você está trabalhando, para isso, selecione o ambiente no canto inferior direito do VSCode e uma caixa seletora aparecerá na parte superior, selecione o ambiente (nesse caso é o "TESTE"). 
+
+![Animated GIF-downsized_large (2)](https://user-images.githubusercontent.com/51421653/85059340-d9b68c80-b179-11ea-9f79-3b307d1474b1.gif)
+
 Para finalizarmos a configuração do .vscode, nós temos que seguir um processo de encriptação de senha, para isso, abra o console do vscode
 ```
 Windows: Ctrl + ' 
@@ -78,10 +82,6 @@ Linux: Ctrl + Shift + `
 ```
 vá até a aba "OUTPUT".
 Agora com o arquivo settings.json aberto utilize o comando Ctrl + P e escreva '>Advpl - Compiler Cipher' isso irá abrir uma caixa de texto, coloque a senha que foi escrita no arquivo settings.json e uma nova senha será gerada no console, cole a nova senha no arquivo settings.json no lugar na senha antiga.
-
-Após toda a configuração do settings.json, será necessário informar o ambiente em que você está trabalhando, para isso, selecione o ambiente no canto inferior direito do VSCode e uma caixa seletora aparecerá na parte superior, selecione o ambiente (nesse caso é o "TESTE") e pronto. 
-
-![Animated GIF-downsized_large (2)](https://user-images.githubusercontent.com/51421653/85059340-d9b68c80-b179-11ea-9f79-3b307d1474b1.gif)
 
 Pronto! agora você está pronto para desenvolver.
 
@@ -390,6 +390,7 @@ Return .T.
 
 ### Compilação
 
-Chegou a hora de compilarmos o nosso código ao RPO do cliente. Para isso, precisamos ter a conexão com a VPN estabelecida e o acesso à VM do cliente. <b>(Caso não tenha acesso a máquina, o cliente deverá fazer esse processo sempre que você precisar compilar algo).</b>
+Chegou a hora de compilarmos o nosso código ao RPO do cliente. Para isso, precisamos ter a conexão com a VPN estabelecida e o acesso à VM do cliente. <br>
+<b>(Caso não tenha acesso a máquina, o cliente deverá fazer esse processo sempre que você precisar compilar algo).</b>
 
 - 
