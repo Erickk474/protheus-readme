@@ -1,3 +1,7 @@
+# Atenção! Se você estiver vendo através do driver, tente visualizar este documento através do link abaixo (é mais elegante).
+
+### https://github.com/Erickk474/protheus-readme
+
 # Guia de Referência Protheus
 
 ### Setup e Sistema de Diretórios
